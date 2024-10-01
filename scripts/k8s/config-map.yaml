@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: <<app_name>>-configmap
+  namespace: default
+data:
+  appsettings.json: |-
+    {
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft.AspNetCore": "Warning"
+        }
+      },
+      "AllowedHosts": "*",
+      "Environment": "Production",
+      "ApplicationSetting": {
+        "url" :  "https://url.example.com"
+      }
+    }
